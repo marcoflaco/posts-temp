@@ -5,8 +5,14 @@
       <ol class="card mt-2" v-for="(post, index) in items" :key="post.id">
         <li class="card-body">
           <span>Post {{ post.id }}</span>
-          <button @click="moveUp(index)" v-if="index > 0">↑</button>
-          <button @click="moveDown(index)" v-if="index < items.length - 1">
+          <button @click="moveUp(index)" v-if="index > 0" aria-label="move-up">
+            ↑
+          </button>
+          <button
+            @click="moveDown(index)"
+            aria-label="move-down"
+            v-if="index < items.length - 1"
+          >
             ↓
           </button>
         </li>

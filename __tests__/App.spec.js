@@ -1,9 +1,8 @@
 import { flushPromises, shallowMount } from "@vue/test-utils";
 import App from "@/App.vue";
-import { moveItemWithinArray } from "@/utils";
+// import { moveItemWithinArray } from "@/utils";
 import { fetchPosts } from "@/service";
 
-// Mocking fetchPosts function
 jest.mock("@/service", () => {
   return {
     fetchPosts: jest.fn(),

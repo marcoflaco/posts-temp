@@ -1,0 +1,12 @@
+.custom-light-green-btn {
+    background-color: #00ff86;
+    border: none;
+    color: #0f0017;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.custom-light-green-btn:hover {
+    background-color: rgb(50, 235, 124);
+    border: none;
+}

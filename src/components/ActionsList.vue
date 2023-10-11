@@ -1,24 +1,35 @@
 <template>
-  <h2>Actions</h2>
-  <div class="card">
-    <TransitionGroup name="list">
-      <div v-if="!actions.length">NO Actions applied</div>
-      <ul
-        v-else
-        class="list-group"
-        v-for="(action, index) in actions"
-        :key="action.message"
-      >
-        <li class="list-group-item">
-          {{ action.message }}
-          <button @click="timeTravel(index)">Time travel</button>
-        </li>
-      </ul>
-    </TransitionGroup>
+  <div class="card mb-3 mt-1 mt-md-5">
+    <div class="card-header">List of actions commited</div>
+    <div class="m-3">
+      <TransitionGroup name="list">
+        <div v-if="!actions.length">No actions applied</div>
+        <ul
+          v-else
+          class="list-group"
+          v-for="(action, index) in actions"
+          :key="action.message"
+        >
+          <li
+            class="list-group-item d-flex flex-column flex-lg-row justify-content-between align-items-center font-color-grey"
+          >
+            {{ action.message }}
+            <button
+              @click="timeTravel(index)"
+              class="custom-light-green-btn px-3 py-2"
+            >
+              Time travel
+            </button>
+          </li>
+        </ul>
+      </TransitionGroup>
+    </div>
   </div>
 </template>
 
 <script>
+import "./ActionsList.css";
+
 export default {
   name: "ActionList",
   props: {

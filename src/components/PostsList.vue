@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-1 mt-md-5">
     <h2 class="title-color">Sortable Post List</h2>
     <TransitionGroup name="list">
       <ol class="card mt-2" v-for="(post, index) in items" :key="post.id">
